@@ -1,6 +1,6 @@
 import queue, time
 from multiprocessing.managers import BaseManager
-import retry_address
+import address_ele
 import requests
 import json
 import time
@@ -31,7 +31,7 @@ class worker(object):
         self.proxy = self.m.get_ip_proxy_queue()
 
     def start(self):
-        test = retry_address.ELE()
+        test = address_ele.ELE()
         self.login_module = captchas.Captchas()
         count = 0
         while not self.result.empty():
